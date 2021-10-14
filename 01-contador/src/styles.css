@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+
+button {
+  width: 3rem;
+  border: none;
+  font-size: 2rem;
+  margin: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  color: snow;
+}

@@ -1,0 +1,49 @@
+<h3>Pipes: uppercase, lowercase, titlecase</h3>
+
+<table class="table text-dark bg-light">
+  <thead>
+    <tr>
+      <th scope="col">Original</th>
+      <th scope="col">Pipe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ title }}</td>
+      <td>{{ title | uppercase }}</td>
+    </tr>
+    <tr>
+      <td>{{ title }}</td>
+      <td>{{ title | lowercase }}</td>
+    </tr>
+    <tr>
+      <td>{{ title }}</td>
+      <td>{{ title | titlecase }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Pipes: number, currency, percent</h3>
+
+<table class="table text-dark bg-light">
+  <thead>
+    <tr>
+      <th scope="col">Original</th>
+      <th scope="col">Pipe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ decimal }}</td>
+      <td>{{ decimal | number }}</td>
+    </tr>
+    <tr>
+      <td>{{ decimal }}</td>
+      <td>{{ decimal | currency: "MXN" }}</td>
+    </tr>
+    <tr>
+      <td>{{ iva }}</td>
+      <td>{{ iva | percent }}</td>
+    </tr>
+  </tbody>
+</table>

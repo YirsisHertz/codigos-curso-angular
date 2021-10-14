@@ -1,0 +1,55 @@
+<form
+  (ngSubmit)="guardarContacto()"
+  [formGroup]="formulario"
+  autocomplete="off"
+>
+  <label>
+    Nombre:
+    <input
+      class="formControl"
+      formControlName="nombre"
+      placeholder="Nombre"
+      type="text"
+    />
+  </label>
+  <span class="alert" *ngIf="getErrors('nombre')">
+    El nombre es invalido, necesita minimo 2 letras y maximo 15 y es requerido
+  </span>
+
+  <br />
+
+  <label>
+    Correo:
+    <input
+      class="formControl"
+      formControlName="correo"
+      placeholder="Email"
+      type="email"
+    />
+  </label>
+
+  <span class="alert" *ngIf="getErrors('correo')">
+    Esto no es un correo :v
+  </span>
+
+  <br />
+
+  <label>
+    Edad:
+    <input
+      class="formControl"
+      formControlName="edad"
+      placeholder="Edad"
+      type="number"
+    />
+  </label>
+
+  <span class="alert" *ngIf="getErrors('edad')">
+    La edad no puede ser menor a 0 ni mayor de 100...
+  </span>
+  <br />
+
+  <button class="btn success" [disabled]="formulario.invalid" type="submit">
+    Guardar Contacto
+  </button>
+</form>

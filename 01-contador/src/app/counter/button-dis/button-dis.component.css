@@ -1,0 +1,7 @@
+button {
+  background-color: red;
+}
+
+button:hover {
+  background-color: tomato;
+}

@@ -1,0 +1,11 @@
+.formControl {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 0;
+
+  &:focus {
+    border-bottom: 5px solid tomato;
+    margin: 7px 0;
+  }
+}

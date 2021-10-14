@@ -1,0 +1,12 @@
+<h1>Mis proyectos en Angular</h1>
+<hr />
+
+<div class="row">
+  <div *ngFor="let proyecto of proyectosData" class="col-12 col-md-4">
+    <app-card
+      [nombre]="proyecto.nombre"
+      [img]="proyecto.img"
+      [url]="proyecto.url"
+    ></app-card>
+  </div>
+</div>

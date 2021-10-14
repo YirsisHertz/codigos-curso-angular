@@ -1,0 +1,37 @@
+@import "variables";
+
+$darkText: #111;
+
+.btn {
+  background-color: $primary;
+  color: $darkText;
+
+  border: none;
+  font-weight: bold;
+  padding: 4px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color: $primary, $amount: 5);
+  }
+
+  &:active {
+    cursor: pointer;
+    background-color: lighten($color: $primary, $amount: 5);
+  }
+
+  &:disabled {
+    cursor: wait;
+    background-color: slategray;
+  }
+
+  &.success {
+    background-color: seagreen;
+    color: $white;
+
+    &:disabled {
+      cursor: wait;
+      background-color: slategray;
+    }
+  }
+}

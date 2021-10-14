@@ -1,0 +1,28 @@
+<div class="text-center" [ngClass]="mode | darkmode">
+  <h1>| {{ "pipes app" | titlecase }} |</h1>
+  <hr />
+
+  <h2>Custom Pipes</h2>
+
+  <div>
+    <h3>DarkMode Pipe</h3>
+    <button (click)="changeMode()" class="btn btn-outline-success">
+      {{ mode ? "Dark" : "Light" }}
+    </button>
+  </div>
+
+  <div>
+    <h3>Temperature Pipe</h3>
+    <p class="fs-2">{{ temp | temperature }} - {{ temp | temperature: "f" }}</p>
+  </div>
+
+  <hr />
+
+  <app-multi-pipes [mode]="mode"></app-multi-pipes>
+
+  <app-data [persona]="persona"></app-data>
+
+  <app-colections [persona]="persona"></app-colections>
+
+  <app-dinamic-img></app-dinamic-img>
+</div>
