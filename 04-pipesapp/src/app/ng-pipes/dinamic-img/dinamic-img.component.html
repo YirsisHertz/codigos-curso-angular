@@ -1,8 +1,0 @@
-<div class="my-3">
-  <h3>Pipe: async</h3>
-  <app-loading *ngIf="!(img | async); else imageBlock"></app-loading>
-
-  <ng-template #imageBlock>
-    <img [src]="img | async" alt="random" />
-  </ng-template>
-</div>
