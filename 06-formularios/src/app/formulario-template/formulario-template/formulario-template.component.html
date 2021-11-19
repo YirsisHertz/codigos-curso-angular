@@ -1,0 +1,102 @@
+<form
+  class="form-group container"
+  (ngSubmit)="agregar()"
+  #miFormulario="ngForm"
+>
+  <div
+    *ngIf="miFormulario.invalid && miFormulario.touched"
+    class="alert alert-danger d-flex align-items-center"
+    role="alert"
+  >
+    <i class="bi bi-shield-x"></i>
+    <div>Error: Formulario Invalido</div>
+  </div>
+
+  <div>
+    <label for="proyecto">Proyecto</label>
+    <input
+      autocomplete="off"
+      class="form-control"
+      type="text"
+      id="proyecto"
+      placeholder="Nombre del proyecto"
+      [(ngModel)]="initialState.proyecto"
+      name="proyecto"
+      minlength="3"
+      maxlength="15"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="horas">Horas</label>
+    <input
+      class="form-control"
+      type="number"
+      id="horas"
+      placeholder="Horas para completar"
+      [(ngModel)]="initialState.horas"
+      name="horas"
+      required
+      min="0"
+      max="25"
+    />
+  </div>
+
+  <div>
+    <label for="tecnologias">Tecnologias</label>
+    <div class="row">
+      <div class="col-8">
+        <input
+          autocomplete="off"
+          class="form-control"
+          type="text"
+          id="tecnologias"
+          placeholder="Nombre de la tecnologia"
+          [(ngModel)]="initialState.tecnologia"
+          name="tecnologia"
+          minlength="3"
+          maxlength="15"
+        />
+      </div>
+      <div class="col-4">
+        <button (click)="agregarTec()" type="button" class="btn btn-success">
+          Agregar
+        </button>
+      </div>
+
+      <div class="col-12 my-2">
+        <ul class="list-group list-group-horizontal">
+          <li *ngFor="let tecnologia of tecnologias" class="list-group-item">
+            {{ tecnologia }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <button class="btn btn-warning mt-2 w-100" type="submit">
+      Agregar Proyecto
+    </button>
+  </div>
+</form>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Proyecto</th>
+        <th scope="col">Horas</th>
+        <th scope="col">Tecnologias</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let proyecto of proyectos">
+        <th scope="row">{{ proyecto.proyecto }}</th>
+        <td>{{ proyecto.horas }}</td>
+        <td>{{ proyecto.tecnologias }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
