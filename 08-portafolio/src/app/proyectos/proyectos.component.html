@@ -1,0 +1,28 @@
+<div class="row">
+  <div *ngFor="let proyecto of data" class="col-12 col-md-4">
+    <div class="card m-2" style="width: 18rem">
+      <img
+        [src]="proyecto.img"
+        class="card-img-top p-2"
+        [alt]="proyecto.nombre"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ proyecto.nombre }}</h5>
+
+        <div>
+          <a target="_blank" [href]="proyecto.url" class="btn btn-warning w-100"
+            >Visitar Aplicación</a
+          >
+        </div>
+
+        <div class="mt-2">
+          <a
+            [routerLink]="'informacion/' + getURI(proyecto.nombre)"
+            class="btn btn-success w-100"
+            >Ver Detalles</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
