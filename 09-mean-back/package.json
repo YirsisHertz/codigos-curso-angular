@@ -4,6 +4,7 @@
   "description": "Proyecto de MEAN Stack para curso de Udemy",
   "main": "index.js",
   "scripts": {
+    "test": "mocha test/auth --exit",
     "dev": "nodemon index.js",
     "start": "node index.js"
   },

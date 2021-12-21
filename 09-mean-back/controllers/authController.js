@@ -4,15 +4,6 @@ const { validationResult } = require("express-validator");
 const Usuario = require("../models/usuario");
 
 const registerUsuario = async (req, res) => {
-  const errors = validationResult(req);
-
-  if (!errors.isEmpty()) {
-    return res.status(501).json({
-      ok: false,
-      errors: errors.mapped(),
-    });
-  }
-
   const { email, password, username } = req.body;
 
   try {
@@ -60,15 +51,6 @@ const registerUsuario = async (req, res) => {
 };
 
 const loginUsuario = async (req, res) => {
-  const errors = validationResult(req);
-
-  if (!errors.isEmpty()) {
-    return res.status(501).json({
-      ok: false,
-      errors: errors.mapped(),
-    });
-  }
-
   const { email, password } = req.body;
 
   try {
