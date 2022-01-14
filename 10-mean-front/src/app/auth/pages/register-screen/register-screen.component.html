@@ -1,0 +1,70 @@
+<div class="row container">
+  <form (ngSubmit)="register()" [formGroup]="miFormulario" class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <h2>Register</h2>
+        <hr />
+      </div>
+
+      <div class="input-field col s12">
+        <input
+          formControlName="username"
+          id="username"
+          type="text"
+          class="validate"
+        />
+        <label for="username">Username</label>
+        <span class="helper-text" data-error="wrong" data-success="right">
+          Example Name
+        </span>
+      </div>
+
+      <div class="input-field col s12">
+        <input
+          formControlName="email"
+          id="email"
+          type="email"
+          class="validate"
+        />
+        <label for="email">Email</label>
+        <span class="helper-text" data-error="wrong" data-success="right">
+          email@example.com
+        </span>
+      </div>
+
+      <div class="input-field col s12">
+        <input
+          formControlName="password"
+          id="password"
+          type="password"
+          class="validate"
+        />
+        <label for="password">Password</label>
+        <span class="helper-text" data-error="wrong" data-success="right">
+          Password min lenght 6 characters
+        </span>
+      </div>
+
+      <div class="input-field col s12">
+        <input
+          formControlName="password2"
+          id="password2"
+          type="password"
+          class="validate"
+        />
+        <label for="password2">Confirm Password</label>
+        <span class="helper-text" data-error="wrong" data-success="right">
+          Confirm Password
+        </span>
+      </div>
+
+      <div class="input-field col s12">
+        <a routerLink="/auth/login">Or Login Account</a>
+      </div>
+
+      <div class="input-field col s12">
+        <button class="waves-effect waves-light btn">Register</button>
+      </div>
+    </div>
+  </form>
+</div>

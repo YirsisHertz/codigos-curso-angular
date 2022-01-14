@@ -1,0 +1,18 @@
+<form [formGroup]="miFormulario" (ngSubmit)="update()">
+  <div class="row container">
+    <h2>Update Task</h2>
+    <hr />
+    <div class="input-field col s6">
+      <input
+        formControlName="newTask"
+        id="create"
+        type="text"
+        class="validate"
+      />
+      <label class="active" for="create">New Value Task</label>
+    </div>
+    <div class="input-field col s6">
+      <button class="btn waves-effect waves-light blue">Actualizar</button>
+    </div>
+  </div>
+</form>

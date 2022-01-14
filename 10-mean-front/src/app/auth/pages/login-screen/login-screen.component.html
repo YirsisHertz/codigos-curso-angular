@@ -1,0 +1,44 @@
+<div class="row container">
+  <form (ngSubmit)="login()" [formGroup]="miFormulario" class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <h2>Login</h2>
+        <hr />
+      </div>
+
+      <div class="input-field col s12">
+        <input
+          formControlName="email"
+          id="email"
+          type="email"
+          class="validate"
+        />
+        <label for="email">Email</label>
+        <span class="helper-text" data-error="wrong" data-success="right">
+          email@example.com
+        </span>
+      </div>
+
+      <div class="input-field col s12">
+        <input
+          formControlName="password"
+          id="password"
+          type="password"
+          class="validate"
+        />
+        <label for="password">Password</label>
+        <span class="helper-text" data-error="wrong" data-success="right">
+          Password
+        </span>
+      </div>
+
+      <div class="input-field col s12">
+        <a routerLink="/auth/register">Or Create Account</a>
+      </div>
+
+      <div class="input-field col s12">
+        <button class="waves-effect waves-light btn">Login</button>
+      </div>
+    </div>
+  </form>
+</div>
