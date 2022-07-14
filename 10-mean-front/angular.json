@@ -160,7 +160,6 @@
       }
     }
   },
-  "defaultProject": "mean-front",
   "cli": {
     "analytics": false
   }
