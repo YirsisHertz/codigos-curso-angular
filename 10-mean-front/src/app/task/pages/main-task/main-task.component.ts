@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CrudService } from '../../../services/crud.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-main-task',
@@ -11,14 +11,14 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class MainTaskComponent implements OnInit {
   tasks: Array<any> = [];
   user: any;
-  miFormulario: FormGroup = this.formBuilder.group({
+  miFormulario: UntypedFormGroup = this.formBuilder.group({
     newTask: [''],
   });
 
   constructor(
     private crudService: CrudService,
     private router: Router,
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
   ) {}
 
   ngOnInit(): void {

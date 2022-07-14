@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CrudService } from 'src/app/services/crud.service';
 
@@ -11,7 +11,7 @@ import { CrudService } from 'src/app/services/crud.service';
 export class TaskUpdateComponent implements OnInit {
   user: any;
   id: string = '';
-  miFormulario: FormGroup = this.formBuilder.group({
+  miFormulario: UntypedFormGroup = this.formBuilder.group({
     newTask: [''],
   });
 
@@ -19,7 +19,7 @@ export class TaskUpdateComponent implements OnInit {
     private crudService: CrudService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.miFormulario.setValue({ newTask: params['nombre'] });
