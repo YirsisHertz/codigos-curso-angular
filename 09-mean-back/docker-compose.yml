@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  meanapp:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - MODE=dev
+    links:
+      - meandb
+    volumes:
+      - .:/app
+  meandb:
+    image: mongo:4.4
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=yirsis
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

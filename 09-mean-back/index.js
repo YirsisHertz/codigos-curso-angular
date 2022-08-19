@@ -1,4 +1,6 @@
-require("dotenv").config();
+require("dotenv").config({
+  path: process.env.MODE == "dev" ? ".env.development" : ".env",
+});
 
 const { version } = require("./package.json");
 
@@ -51,5 +53,6 @@ app.use("/auth", authRouter);
 app.use("/task", taskRouter);
 
 app.listen(process.env.PORT, () => {
+  console.log(`MODE: ${process.env.MODE}`);
   console.log(`aplicacion corriendo en el puerto ${process.env.PORT}`);
 });
