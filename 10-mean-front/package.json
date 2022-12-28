@@ -26,6 +26,7 @@
     "@angular/service-worker": "^14.0.6",
     "@nguniversal/express-engine": "^14.0.3",
     "express": "^4.15.2",
+    "localstorage-polyfill": "^1.0.1",
     "rxjs": "~7.4.0",
     "sweetalert2": "^11.3.4",
     "tslib": "^2.3.0",
