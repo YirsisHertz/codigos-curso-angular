@@ -1,0 +1,22 @@
+<div>
+  <app-fab
+    fabText="bi bi-plus-lg"
+    position="left"
+    theme="primary"
+    (actionCallback)="incrementAction()"
+  />
+
+  <app-fab
+    fabText="bi bi-arrow-clockwise"
+    position="bottom"
+    theme="error"
+    (actionCallback)="resetAction()"
+  />
+
+  <app-fab
+    fabText="bi bi-dash-lg"
+    position="right"
+    theme="secondary"
+    (actionCallback)="decreaseAction()"
+  />
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Counter: {{ count }}</h1>
+
+  <app-container-fab
+    (incrementActionEmitter)="addCount()"
+    (decrementActionEmitter)="decreaseCount()"
+    (resetActionEmitter)="restoreCount()"
+  />
+</div>
